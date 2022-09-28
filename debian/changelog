@@ -1,0 +1,21 @@
+commonmark (0.9.1-3) unstable; urgency=medium
+
+  * debian/rules
+    - move /usr/bin/cmark to /u/b/python3-commonark, to avoid a further conflict
+      with src:php-league-commonmark; Closes: #968689
+
+ -- Sandro Tosi <morph@debian.org>  Tue, 08 Sep 2020 21:35:42 -0400
+
+commonmark (0.9.1-2) unstable; urgency=medium
+
+  * debian/rules
+    - move /usr/bin/cmark to /u/b/commonark, to avoid a conflict with src:cmark;
+      Closes: #968689
+
+ -- Sandro Tosi <morph@debian.org>  Sat, 22 Aug 2020 13:37:13 -0400
+
+commonmark (0.9.1-1) unstable; urgency=low
+
+  * Initial release; Closes: #962721
+
+ -- Sandro Tosi <morph@debian.org>  Fri, 12 Jun 2020 22:56:16 -0400

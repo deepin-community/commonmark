@@ -1,0 +1,13 @@
+#! /usr/bin/make -f
+
+export PYBUILD_NAME=commonmark
+
+%:
+	dh $@ --with python3 --buildsystem=pybuild
+
+override_dh_auto_test:
+	dh_auto_test -- --system=custom --test-args="PYTHONPATH={build_dir} {interpreter} setup.py test"
+
+override_dh_auto_install:
+	dh_auto_install
+	mv $(CURDIR)/debian/python3-commonmark/usr/bin/cmark $(CURDIR)/debian/python3-commonmark/usr/bin/python3-commonmark
